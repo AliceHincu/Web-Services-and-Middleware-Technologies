@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="backend" />
+        <module name="consumer2" />
+        <module name="consumer1" />
+        <module name="consumer_3" />
+      </profile>
+      <profile name="Annotation profile for wsmt-project" enabled="true">
+        <sourceOutputDir name="../consumer2/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../consumer2/target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="consumer2 (3)" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="consumer3" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="backend" options="-parameters" />
+      <module name="consumer1" options="-parameters" />
+      <module name="consumer2" options="-parameters" />
+      <module name="consumer2 (3)" options="-parameters" />
+      <module name="consumer3" options="" />
+      <module name="consumer_3" options="-parameters" />
+    </option>
+  </component>
+</project>

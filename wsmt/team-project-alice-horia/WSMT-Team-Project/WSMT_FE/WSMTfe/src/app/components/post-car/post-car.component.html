@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="custom-form-container">
+        <h2 class="custom-form-title">Add New Car</h2>
+        <form [formGroup]="postCarForm" (ngSubmit)="postCar()">
+            <div class="custom-form-group">
+                <label for="model" class="custom-label">Model:</label>
+                <input type="text" id="model" name="model" required formControlName="model" class="custom-input">
+                <div *ngIf="postCarForm.get('model')?.errors && postCarForm.get('model')?.touched" class="custom-error-message">Modelul trebuie să fie completat și valid.</div>
+            </div>
+            <div class="custom-form-group">
+                <label for="manufacturer" class="custom-label">Manufacturer:</label>
+                <input type="manufacturer" id="manufacturer" name="manufacturer" required formControlName="manufacturer" class="custom-input">
+                <div *ngIf="postCarForm.get('manufacturer')?.errors && postCarForm.get('manufacturer')?.touched" class="custom-error-message">Producătorul trebuie să fie completat și valid.</div>
+            </div>
+            <div class="custom-form-group">
+                <label for="productionYear" class="custom-label">Production Year:</label>
+                <input type="number" id="productionYear" name="productionYear" required formControlName="productionYear" class="custom-input">
+                <div *ngIf="postCarForm.get('productionYear')?.errors && postCarForm.get('productionYear')?.touched" class="custom-error-message">Anul trebuie să fie completat și valid.</div>
+            </div>
+            <button type="submit" class="custom-button">Add</button>
+            <div *ngIf="errorMessage" class="custom-error-message">{{ errorMessage }}</div>
+        </form>
+    </div>
+</div>

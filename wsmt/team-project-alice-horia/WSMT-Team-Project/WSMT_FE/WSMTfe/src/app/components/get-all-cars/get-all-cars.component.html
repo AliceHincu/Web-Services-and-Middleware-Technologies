@@ -1,0 +1,24 @@
+<div class="container">
+    <button class="btn-new" routerLink="/car">Add a new car</button>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Manufacturer</th>
+            <th>Production Year</th> 
+            <th>Manage</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let car of cars">
+            <td>{{car.model}}</td>
+            <td>{{car.manufacturer}}</td>
+            <td>{{car.productionYear}}</td>
+            <td>
+                <button class="btn-update" routerLink="/car/{{car.id}}">Update</button>
+                <button class="btn-delete" (click)="deleteCar(car.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
